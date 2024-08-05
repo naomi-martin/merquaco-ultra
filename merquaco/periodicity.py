@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 
-def get_periodicity_list(transcripts: pd.DataFrame, num_planes: int = 7, fov_dimensions: tuple = (202, 202)):
+def get_periodicity_list(transcripts: pd.DataFrame, num_planes: int = 7, fov_dimensions: tuple = (282, 282)):
     """
     Performs periodicity analysis across z-planes
 
@@ -13,7 +13,7 @@ def get_periodicity_list(transcripts: pd.DataFrame, num_planes: int = 7, fov_dim
     num_planes : int, optional
         Number of planes to get periodicity values for. Default is 7.
     fov_dimensions : tuple, optional
-        (x, y) dimensions for FOV tiles. Default is (202, 202).
+        (x, y) dimensions for FOV tiles. Default is (282, 282) for ultra.
 
     Returns
     -------
@@ -37,7 +37,7 @@ def get_periodicity_list(transcripts: pd.DataFrame, num_planes: int = 7, fov_dim
     return periodicity_list
 
 
-def get_chunk_values(transcripts: np.ndarray, image_dimensions: int, fov_dimensions: int = 202):
+def get_chunk_values(transcripts: np.ndarray, image_dimensions: int, fov_dimensions: int = 282):
     """
     Calculates histogram and periodicity chunk values for transcripts DataFrame
 
@@ -48,7 +48,7 @@ def get_chunk_values(transcripts: np.ndarray, image_dimensions: int, fov_dimensi
     image_dimensions : int
         Size of image
     fov_dimensions : int, optional
-        Field of view dimensions. Default is 202 (microns).
+        Field of view dimensions. Default is 282 (microns) for ultra.
 
     Returns
     -------
@@ -100,7 +100,7 @@ def get_image_dimensions(transcripts: pd.DataFrame):
     return np.round(max(max_x, max_y)) + 1000
 
 
-def get_periodicity_vals_all_z(transcripts: pd.DataFrame, fov_dimensions: int = 202):
+def get_periodicity_vals_all_z(transcripts: pd.DataFrame, fov_dimensions: int = 282):
     """
     Performs periodicity analysis in all z-planes collapsed
 
