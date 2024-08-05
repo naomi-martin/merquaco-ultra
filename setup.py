@@ -20,7 +20,7 @@ setup(
     packages=find_packages(where="."),
 	package_data={
 		'': ['*.ilp'],
-        'merquaco-ultra': ['../ilastik_models/*.ilp'],
+        'merquaco': ['../ilastik_models/*.ilp'],
     },
 	include_package_data=True,
     install_requires=requirements,
