@@ -10,12 +10,12 @@ REQUIREMENTS = (HERE / "requirements.txt").read_text()
 requirements = REQUIREMENTS.splitlines()
 
 setup(
-    name="merquaco",
+    name="merquaco-ultra",
     version="0.0.1",
     description="Tools for QC on MERSCOPE datasets",
     author="Naomi Martin, Paul Olsen",
     author_email="naomi.martin@alleninstitute.org, paul.olsen@alleninstitute.org",
-    url="https://github.com/AllenInstitute/merquaco",
+    url="https://github.com/naomi-martin/merquaco-ultra",
     license = "LICENSE",
     packages=find_packages(where="."),
 	package_data={
